@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathonrx/screens/dashboard.dart';
 import 'screens/welcomeScreen.dart';
 import 'screens/loginPage.dart';
 import 'screens/registrationPage.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/': (context)=>WelcomeScreen(),
         '/register': (context)=> RegistrationPage(),
         '/login': (context)=> LoginPage(),
+        '/dashboard': (context)=> Dashboard(),
       },
     );
   }

@@ -9,6 +9,8 @@ dependencies:
     sdk: flutter
   animated_text_kit: ^2.0.1
   cupertino_icons: ^0.1.2
+  curved_navigation_bar: ^0.3.2
+
 
 
 dev_dependencies:

@@ -46,7 +46,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
                     SizedBox(width: 10,),
                     Text('Be',style: TextStyle(fontSize: 45.0,fontFamily: 'Pacifico',fontWeight: FontWeight.bold)),
-
                     RotateAnimatedTextKit(
                       onTap: () {
                         print("Tap Event");
@@ -55,9 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       repeatForever: true,
                       text: [" Fit", "Healthy"," You"],
                       textStyle: TextStyle(fontSize: 45.0, fontFamily: 'Pacifico', fontWeight: FontWeight.bold),
-
                     ),
-
                   ],
                 ),
                 SizedBox(
