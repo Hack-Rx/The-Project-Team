@@ -3,7 +3,7 @@ import 'package:hackathonrx/screens/mealPlanner.dart';
 import 'package:hackathonrx/screens/chatbot.dart';
 import 'package:hackathonrx/screens/calorieCounter.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
+import 'package:hackathonrx/components/drawer.dart';
 
 
 class Dashboard extends StatefulWidget {
@@ -25,14 +25,11 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
         backgroundColor: Colors.purpleAccent,
         appBar: AppBar(
-          leading:CircleAvatar(
-            backgroundImage: AssetImage('assets/images/healthrx.png'),
-          ),
-
           backgroundColor: Colors.purpleAccent,
           title: Text('HealthRX'),
           centerTitle: true,
         ),
+        drawer: MainDrawer(),
         bottomNavigationBar: CurvedNavigationBar(
           index: pageNumber,
           animationDuration: Duration(milliseconds: 250 ),
