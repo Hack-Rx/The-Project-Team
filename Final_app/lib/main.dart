@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/login': (context)=> LoginPage(),
         '/dashboard': (context)=> Dashboard(),
         '/bmiInput':(context)=>InputPage(),
+
       },
     );
   }

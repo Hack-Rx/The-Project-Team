@@ -7,6 +7,8 @@ import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 String _apiKey = '52fae7b0abb444a6b6afbaa1ab84e5b6';
 String _url = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=';
+
+
 // https://api.spoonacular.com/recipes/complexSearch?apiKey=52fae7b0abb444a6b6afbaa1ab84e5b6&query=pasta&minFat=25&minCalories=50&minCarbs=10&minSugar=0&number=1
 
 class CalorieCounter extends StatefulWidget {
@@ -29,12 +31,12 @@ class _CalorieCounterState extends State<CalorieCounter> {
       fat= response["results"][0][ "nutrition"][1]["amount"];
       carbs= response["results"][0][ "nutrition"][2]["amount"];
       sugar= response["results"][0][ "nutrition"][3]["amount"];
-      showSpinner=false;
+      _showSpinner=false;
     });
 
   }
   String food;
-  bool showSpinner=false;
+  bool _showSpinner=false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class _CalorieCounterState extends State<CalorieCounter> {
       
       backgroundColor: Colors.purpleAccent,
       body: ModalProgressHUD(
-        inAsyncCall: showSpinner,
+        inAsyncCall: _showSpinner,
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -59,7 +61,7 @@ class _CalorieCounterState extends State<CalorieCounter> {
                         icon: Icon(Icons.search),
                         onPressed: (){
                           setState(() {
-                            showSpinner=true;
+                            _showSpinner=true;
                           });
                           getData(food);
                         },
